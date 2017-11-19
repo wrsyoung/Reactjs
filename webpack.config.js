@@ -1,73 +1,29 @@
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-const path = require('path')
-const webpack = require('webpack')
+module.exports = {
+    entry: './src/index.js',
 
-const analyze = !!process.env.ANALYZE_ENV
-const env = process.env.NODE_ENV || 'development'
+    output: {
+        path: __dirname + '/public',
+        filename: 'bundle.js'
+    },
 
-const webpackConfig = {
-  name: 'client',
-  target: 'web',
+    devServer: {
+        inline: true,
+        port: 7777,
+        contentBase: __dirname + '/public'
+    },
 
-  entry: {
-    app: path.resolve('src/main.js'),
-  },
-
-  devServer: {
-    inline: true,
-    port: 8080,
-    contentBase: path.resolve(__dirname, 'public')
-  },
-
-  module: {
-    rules: [{
-      test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader',
-    }],
-  },
-
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(env),
-      },
-    }),
-  ],
-
-  output: {
-    filename: '[name].js',
-    path: path.resolve('public/dist'),
-    publicPath: '/',
-  },
-
-  resolve: {
-    modules: [
-      path.resolve('src'),
-      'node_modules',
-    ],
-    extensions: ['.js', '.jsx'],
-  },
-}
-
-if (analyze) {
-  webpackConfig.plugins.push(new BundleAnalyzerPlugin())
-}
-
-if (env === 'production') {
-  webpackConfig.plugins.push(
-    new webpack.LoaderOptionsPlugin({
-      minimize: true,
-      debug: false,
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        unused: true,
-        dead_code: true,
-        warnings: false,
-      },
-    })
-  )
-}
-
-module.exports = webpackConfig
+    module:
+    {
+        loaders: [
+            {
+                test: /\.js$/,
+                loader: 'babel',
+                exclude: /node_modules/,
+                query: {
+                    cacheDirectory: true,
+                    presets: ['es2015', 'stage-0', 'react']
+                }
+            }
+        ]
+    }
+};
