@@ -3,29 +3,8 @@ import { Button, Container, Divider, Grid, Header,
         Icon, Image, List, Menu, Segment, Visibility,}
         from 'semantic-ui-react'
 
+import FixedMenu from '../components/FixedMenu'
 import Footer from '../components/Footer'
-
-const FixedMenu = () => (
-  <Menu fixed='top' size='large'>
-    <Container>
-      <Menu.Item as='a' active>Home</Menu.Item>
-      <Menu.Item as='a'>Work</Menu.Item>
-      <Menu.Item as='a'>Careers</Menu.Item>
-      <Menu.Menu position='right'>
-        <Menu.Item className='item'>
-          <Button as='a'>Log in</Button>
-        </Menu.Item>
-        <Menu.Item>
-          <Button as='a' primary>Sign Up</Button>
-        </Menu.Item>
-      </Menu.Menu>
-    </Container>
-  </Menu>
-)
-/**
- * When Height is low, this Menu will be shown.
- */
-
 
 
 export default class HomepageLayout extends Component {
