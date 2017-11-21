@@ -1,12 +1,17 @@
-
 # REACT.JS
 
 ## How to use
-- ``npm install``
-- ``npm start ``
+- ``yarn install``
+- ``yarn start ``
 
-*The default server port number is set to* **8080**
+*The default server port number is set to* **3000**
 
-## How to use different port number
-- ``webpack.config.js``
-    - devServer: { port: YourPort }
+## Creating
+- This project is created by create-react-app
+
+## dependencies
+- webpack
+- react
+- react-router
+- semantic-ui-react
+
