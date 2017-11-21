@@ -75,7 +75,7 @@ export default class HomepageLayout extends Component {
                   bordered
                   rounded
                   size='large'
-                  src='/assets/images/wireframe/white-image.png'
+                  src='/assets/images/minieonjeu.jpg'
                 />
               </Grid.Column>
             </Grid.Row>
