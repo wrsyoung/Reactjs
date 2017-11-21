@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Container, Menu, } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 class HeaderComp extends React.Component {
   render() {
@@ -8,8 +8,8 @@ class HeaderComp extends React.Component {
       <div>
         <Container>
           <Menu pointing secondary size='large'>
-            <Menu.Item as={Link} to='/' active>Home</Menu.Item>
-            <Menu.Item as={Link} to='/work'> Work</Menu.Item>
+            <Menu.Item as={NavLink} exact to='/'>Home</Menu.Item>
+            <Menu.Item as={NavLink} to='/work'>Work</Menu.Item>
             <Menu.Item as='a'>Careers</Menu.Item>
             <Menu.Item position='right'>
               <Button as='a'>Log in</Button>

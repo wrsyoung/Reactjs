@@ -1,12 +1,13 @@
-import React from 'react'
-import { Button, Container, Menu, } from 'semantic-ui-react'
+import React from 'react';
+import { Button, Container, Menu, } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 const FixedMenu = () => (
 
-    <Menu fixed='top' size='large'>
+  <Menu fixed='top' size='large'>
     <Container>
-      <Menu.Item as='a' active>Home</Menu.Item>
-      <Menu.Item as='a'>Work</Menu.Item>
+      <Menu.Item as={NavLink} exact to='/'>Home</Menu.Item>
+      <Menu.Item as={NavLink} to='/work'>Work</Menu.Item>
       <Menu.Item as='a'>Careers</Menu.Item>
       <Menu.Menu position='right'>
         <Menu.Item className='item'>
@@ -18,7 +19,7 @@ const FixedMenu = () => (
       </Menu.Menu>
     </Container>
   </Menu>
-    
+
 );
 
 export default FixedMenu;
