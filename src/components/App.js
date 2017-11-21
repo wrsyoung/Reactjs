@@ -1,19 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+
 import HeaderComp from './HeaderComp';
 import FooterComp from './FooterComp';
 
-class App extends React.Component {
-    render(){
+import HomeRoute from '../routes/HomeRoute';
+import WorkRoute from '../routes/WorkRoute';
 
-        return (
+const App = () => {
+    return (
+        <div>
+            <Router>
+                <div>
+                    <HeaderComp/>
                     <div>
-                        <HeaderComp />
-                        <FooterComp />
+                        <Route exact path="/" component={HomeRoute}/>
+                        <Route exact path="/work" component={WorkRoute}/>
                     </div>
-        );
-    }
-}
+                    <FooterComp/>
+                </div>
+            </Router>
+        </div>
+    );
+};
 
 export default App;
