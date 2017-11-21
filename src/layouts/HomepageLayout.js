@@ -33,8 +33,7 @@ export default class HomepageLayout extends Component {
             vertical
           >
             
-            <HeaderComp />
-
+            
             <Container text>
               <Header
                 as='h1'
@@ -97,7 +96,7 @@ export default class HomepageLayout extends Component {
               <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                 <Header as='h3' style={{ fontSize: '2em' }}>"I shouldn't have gone with their competitor."</Header>
                 <p style={{ fontSize: '1.33em' }}>
-                  <Image avatar src='/assets/images/avatar/large/nan.jpg' />
+                  <Image avatar src='/assets/images/minieonjeu.jpg' />
                   <b>Nan</b> Chief Fun Officer Acme Toys
                 </p>
               </Grid.Column>
@@ -133,8 +132,6 @@ export default class HomepageLayout extends Component {
             <Button as='a' size='large'>I'm Still Quite Interested</Button>
           </Container>
         </Segment>
-
-        <FooterComp />
       </div>
     )
   }

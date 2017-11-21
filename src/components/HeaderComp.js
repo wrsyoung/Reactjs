@@ -4,14 +4,14 @@ import { Button, Container, Divider, Grid, Header,
         from 'semantic-ui-react'
 
 const HeaderComp = () => (
-    <Container>
-    <Menu inverted pointing secondary size='large'>
+  <Container>
+    <Menu pointing secondary size='large'>
       <Menu.Item as='a' active>Home</Menu.Item>
       <Menu.Item as='a'>Work</Menu.Item>
       <Menu.Item as='a'>Careers</Menu.Item>
       <Menu.Item position='right'>
-        <Button as='a' inverted>Log in</Button>
-        <Button as='a' inverted style={{ marginLeft: '0.5em' }}>Sign Up</Button>
+        <Button as='a'>Log in</Button>
+        <Button as='a' style={{ marginLeft: '0.5em' }} primary>Sign Up</Button>
       </Menu.Item>
     </Menu>
   </Container>
