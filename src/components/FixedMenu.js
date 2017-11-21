@@ -24,4 +24,3 @@ const FixedMenu = () => (
 );
 
 export default FixedMenu;
-
