@@ -3,7 +3,7 @@ import { Button, Container, Divider, Grid, Header,
         Icon, Image, Segment, Visibility, }
         from 'semantic-ui-react';
  
-import FixedMenu from '../components/FixedMenu'; 
+import FixedMenu from '../components/FixedMenu';
  
  
 export default class HomeRoute extends Component { 
@@ -69,8 +69,8 @@ export default class HomeRoute extends Component {
               </Grid.Column> 
               <Grid.Column floated='right' width={6}> 
                 <Image 
-                  bordered 
-                  rounded 
+                  bordered
+                  rounded
                   size='large' 
                   src='/assets/images/minieonjeu.jpg' 
                 /> 

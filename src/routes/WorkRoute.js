@@ -17,7 +17,7 @@ class WorkRoute extends Component {
         return (
             <div>
             { visible ? <FixedMenu /> : null }
-               <Visibility 
+               <Visibility
           onBottomPassed={this.showFixedMenu} 
           onBottomVisible={this.hideFixedMenu} 
           once={false} 
@@ -25,17 +25,16 @@ class WorkRoute extends Component {
           <Segment 
             inverted 
             textAlign='center' 
-            style={{ minHeight: 100, padding: '1em 0em' }} 
+            style={{ minHeight: 100 }} 
             vertical 
           > 
-             
              
             <Container text> 
               <Header 
                 as='h1' 
-                content='Imagine-a-Company' 
+                content='Working Job'
                 inverted 
-                style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }} 
+                style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '0em' }} 
               /> 
               <Header 
                 as='h2' 
@@ -43,13 +42,9 @@ class WorkRoute extends Component {
                 inverted 
                 style={{ fontSize: '1.7em', fontWeight: 'normal' }} 
               /> 
-              <Button primary size='huge'> 
-                Get Started 
-                <Icon name='right arrow' /> 
-              </Button> 
-            </Container> 
-          </Segment> 
-        </Visibility> 
+            </Container>
+          </Segment>
+        </Visibility>
  
         <Segment style={{ padding: '8em 0em' }} vertical> 
           <Grid container stackable verticalAlign='middle'> 
