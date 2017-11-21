@@ -1,7 +1,7 @@
 import React, { Component } from 'react' 
 import { Button, Container, Divider, Grid, Header, 
         Icon, Image, Segment, Visibility, }
-        from 'semantic-ui-react' 
+        from 'semantic-ui-react';
  
 import FixedMenu from '../components/FixedMenu'; 
  
@@ -13,7 +13,7 @@ export default class HomeRoute extends Component {
   showFixedMenu = () => this.setState({ visible: true }) 
  
   render() { 
-    const { visible } = this.state 
+    const { visible } = this.state;
  
     return ( 
       <div> 
