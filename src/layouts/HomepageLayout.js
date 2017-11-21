@@ -3,9 +3,7 @@ import { Button, Container, Divider, Grid, Header,
         Icon, Image, List, Menu, Segment, Visibility,}
         from 'semantic-ui-react'
 
-import FixedMenu from '../components/FixedMenu'
-import HeaderComp from '../components/HeaderComp'
-import FooterComp from '../components/FooterComp'
+import FixedMenu from '../components/FixedMenu';
 
 
 export default class HomepageLayout extends Component {
